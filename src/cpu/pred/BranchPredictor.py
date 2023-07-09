@@ -82,6 +82,13 @@ class LocalBP(BranchPredictor):
     localPredictorSize = Param.Unsigned(2048, "Size of local predictor")
     localCtrBits = Param.Unsigned(2, "Bits per counter")
 
+class BitlevelBP(BranchPredictor):
+    type = "BitlevelBP"
+    cxx_class = "gem5::branch_prediction::BitlevelBP"
+    cxx_header = "cpu/pred/bit_level.hh"
+
+    localPredictorSize = Param.Unsigned(2048, "Size of local predictor")
+    localCtrBits = Param.Unsigned(2, "Bits per counter")
 
 class TournamentBP(BranchPredictor):
     type = "TournamentBP"

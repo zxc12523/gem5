@@ -30,7 +30,7 @@ Import('*')
 
 SimObject('BranchPredictor.py', sim_objects=[
     'IndirectPredictor', 'SimpleIndirectPredictor', 'BranchPredictor',
-    'LocalBP', 'TournamentBP', 'BiModeBP', 'TAGEBase', 'TAGE', 'LoopPredictor',
+    'LocalBP', 'BitlevelBP', 'TournamentBP', 'BiModeBP', 'TAGEBase', 'TAGE', 'LoopPredictor',
     'TAGE_SC_L_TAGE', 'TAGE_SC_L_TAGE_64KB', 'TAGE_SC_L_TAGE_8KB',
     'LTAGE', 'TAGE_SC_L_LoopPredictor', 'StatisticalCorrector', 'TAGE_SC_L',
     'TAGE_SC_L_64KB_StatisticalCorrector',
@@ -46,6 +46,7 @@ SimObject('BranchPredictor.py', sim_objects=[
 DebugFlag('Indirect')
 Source('bpred_unit.cc')
 Source('2bit_local.cc')
+Source('bit_level.cc')
 Source('btb.cc')
 Source('simple_indirect.cc')
 Source('indirect.cc')
